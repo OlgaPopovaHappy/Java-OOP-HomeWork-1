@@ -1,5 +1,5 @@
 public class HotDrink extends Product{
-    protected int temperature;
+    private int temperature;
 
     public HotDrink(String name, double price, int temperature) {
         super(name, price);
@@ -11,6 +11,10 @@ public class HotDrink extends Product{
     }
     public void setTemperature(int temperature) {
         this.temperature = temperature;
+    }
+
+    public String getProduct(String name, int temperature) {
+        return String.format("Ваш напиток %s охлажден до %а",name,temperature);
     }
 
     @Override
